@@ -1,146 +1,78 @@
+/* Estilos generales */
 body {
-  background-color: #000;
-  margin: 0;
-  padding: 0;
-  height: 100vh; /* Asegura que el cuerpo ocupe toda la altura de la ventana */
-  display: flex;
-  align-items: center; /* Centra verticalmente los elementos en el cuerpo */
-  justify-content: center; /* Centra horizontalmente los elementos en el cuerpo */
-}
-.flower {
-  height: 200px;
-  width: 200px;
-  margin: 20px auto;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  position: relative;
-  background-color: #000; /* Fondo negro para toda la página */
-
-  /* Agrega una animación de pulsación */
-  animation: pulsate 2s infinite;
-}
-
-.text-above,
-.text-below {
-    position: absolute;
+    font-family: 'Pacifico', cursive;
+    background-color: #f4e7e7; /* Color de fondo */
     text-align: center;
-    color: #fff; /* Color del texto */
-    font-size: 25px; /* Tamaño del texto */
+    margin: 0;
+    padding: 0;
+    color: #5c5c5c; /* Color de texto general */
 }
 
-.text-above {
-    top: -60px; /* Ajusta la posición vertical del texto arriba de la flor */
+header {
+    background-color: #ff69b4; /* Color de fondo del encabezado */
+    color: #1e03b6fd; /* Texto blanco */
+    padding: 20px 0;
 }
 
-.text-below {
-    bottom: -60px; /* Ajusta la posición vertical del texto debajo de la flor */
+h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 48px; /* Tamaño de fuente del título */
+    margin: 0;
 }
-@keyframes pulsate {
-  0% {
-      transform: scale(1.5);
-  }
-  50% {
-      transform: scale(1.6);
-  }
-  100% {
-      transform: scale(1.5);
-  }
+
+p {
+    font-size: 28px;
+    color: #1e05ff; /* Color de texto rosa */
 }
-  .mid {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    
-    background: radial-gradient(circle, #000, #ff5e00, #000);
-  
-    z-index: 4;
-  
-    background-size: 5px 5px;
-  
-    filter: drop-shadow(0 0 8px #682600);
-  }
-  
-  .Petal1 {
-    position: absolute;
-    left: 40px;
-    z-index: 3;
-  
-    width: 120px;
-    height: 30px;
-    border-radius: 50%;
-  
-    background: radial-gradient(circle, #ff5e00, #ffbb00);
-  
-    filter: drop-shadow(0 0 5px #e05200);
-  }
-  
-  .Petal1.p1 {
-    transform: rotate(22.5deg);
-  }
-  .Petal1.p2 {
-    transform: rotate(67.5deg);
-  }
-  .Petal1.p3 {
-    transform: rotate(110.5deg);
-  }
-  .Petal1.p4 {
-    transform: rotate(157.5deg);
-  }
-  
-  .Petal2 {
-    position: absolute;
-    left: 0;
-    z-index: 2;
-  
-    width: 200px;
-    height: 40px;
-    border-radius: 50%;
-  
-    background: radial-gradient(circle, #ff5e00, #fbd702);
-  
-    filter: drop-shadow(0 0 5px #e05200);
-  }
-  
-  .Petal2.p1 {
-  }
-  
-  .Petal2.p2 {
-    transform: rotate(90deg);
-  }
-  .Petal2.p3 {
-    transform: rotate(45deg);
-  }
-  
-  .Petal2.p4 {
-    transform: rotate(135deg);
-  }
-  
-  .Petal3 {
-    position: absolute;
-    left: 0px;
-    z-index: 1;
-  
-    width: 200px;
-    height: 40px;
-    border-radius: 50%;
-  
-    background: radial-gradient(circle, #ff5e00, #fbd702);
-  
-    filter: drop-shadow(0 0 2px #fbd702);
-  }
-  
-  .Petal3.p1 {
-    transform: rotate(22.5deg);
-  }
-  .Petal3.p2 {
-    transform: rotate(67.5deg);
-  }
-  .Petal3.p3 {
-    transform: rotate(110.5deg);
-  }
-  .Petal3.p4 {
-    transform: rotate(157.5deg);
-  }
+
+/* Estilos de la sección de fotos */
+.contenedor-fotos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.diapositiva {
+    margin: 20px;
+    text-align: center;
+}
+
+.foto {
+    max-width: 100%;
+    height: auto;
+    border: 10px solid #ff69b4; /* Borde rosa alrededor de las imágenes */
+    box-shadow: 0 0 20px rgba(255, 105, 180, 0.6); /* Sombra suave rosa */
+}
+
+.mensaje {
+    font-family: 'Dancing Script', cursive;
+    font-size: 35px; /* Tamaño de fuente para los mensajes */
+    color: #045569fd; /* Color del texto rosa */
+    margin-top: 10px;
+}
+
+/* Estilos de los botones */
+#anterior,
+#siguiente {
+    background-color: #ff69b4; /* Color de fondo de los botones rosa */
+    color: #fff; /* Texto blanco */
+    padding: 12px 24px; /* Espacio interno de los botones */
+    border: none;
+    font-family: 'Pacifico', cursive;
+    font-size: 24px; /* Tamaño de fuente de los botones */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transición suave de color de fondo */
+    margin: 10px;
+}
+
+#anterior:hover,
+#siguiente:hover {
+    background-color: #ff4785; /* Cambio de color al pasar el cursor sobre los botones */
+}
+
+footer {
+    background-color: #ff69b4; /* Color de fondo del pie de página rosa */
+    color: #fff; /* Texto blanco */
+    padding: 20px 0;
+}
